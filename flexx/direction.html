@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>direction</title>
+    <link rel="stylesheet" href="/css/direction.css">
+
+    <style>
+        .order-1 {
+            order:-1;
+        }
+
+        .order-2 {
+            order:1;
+        }
+
+        .order-3 {
+            order:0;
+        }
+
+        /* 0 < 1 < 2 */
+        /* -1 < 0 < 2 */
+    </style>
+</head>
+
+<body>
+    <div class="container" style="display: none;">
+        <h1>Flex direction</h1>
+        <hr>
+        <div style="margin-top: 20px;"></div>
+
+        <div class="flex">
+            <div class="item"></div>
+            <div class="item" style="background: rgb(240, 55, 71);"></div>
+            <div class="item" style="background: rgb(48, 255, 245);"></div>
+        </div>
+
+        <h3>flex-direction: row</h3>
+        <div class="flex" style="justify-content: space-between;">
+            <div class="item"></div>
+            <div class="item" style="background: rgb(240, 55, 71);"></div>
+            <div class="item" style="background: rgb(48, 255, 245);"></div>
+        </div>
+
+        <h3>flex-direction: column</h3>
+        <div class="flex column" style="justify-content: space-between;">
+            <div class="item"></div>
+            <div class="item" style="background:#881c1c;"></div>
+            <div class="item" style="background:#6e6299;"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Flex order</h1>
+        <hr>
+        <div style="margin-top: 20px;"></div>
+
+        <h3>order</h3>
+        <div class="flex" style="justify-content: space-between; width: 600px; flex-direction: column;">
+            <div class="item order-1" style="color: #fff; width:100px;">1</div>
+            <div class="item order-2" style="background:#881c1c; color: #fff; width:100px;">2</div>
+            <div class="item order-3" style="background:#6e6299;color: #fff; width:100px;">3</div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>

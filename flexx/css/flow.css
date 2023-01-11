@@ -1,0 +1,74 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container {
+    width: 800px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.flow {
+    position: relative;
+    width: 100%;
+    background: #2D4788;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.flow .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* position: relative; */
+    /* word-break: break-all; */
+}
+.flow .item:first-child{
+    padding-top: 40px;
+}
+.flow .item:last-child{
+    padding-bottom: 40px;
+}
+.flow .item::after{
+    content: "";
+    width: 6px;
+    height: 100%;
+    border-right: 4px dashed rgb(240,240,240);
+    left:  calc(50% - 4px);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.flow .item .circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    background: red;
+    position: relative;
+    z-index: 2;
+    left: 1px
+}
+.flow .item .circle:nth-child(3){
+    background: yellow;
+}
+.flow .item .text {
+    position: absolute;
+    padding: 20px;
+    background: red;
+    border-radius: 20px;
+    color: #fff;
+}
+.flow .item:nth-child(odd) .text {
+    left: calc(50% + 44px);
+    /* text-align: right; */
+}
+.flow .item:nth-child(even) .text {
+    right: calc(50% + 44px);
+    /* text-align: right; */
+}
