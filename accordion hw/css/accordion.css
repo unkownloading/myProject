@@ -1,0 +1,57 @@
+* , *::before,*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1 , h2{
+    text-align: center;
+    color: #5C6BBC;
+    padding: 3px;
+}
+.container {
+    width: 80vh;
+    /* height: 30vh; */
+    margin: auto;
+    border: 1px solid rgb(23, 202, 193);
+}
+.container .table {
+    width: 100%;
+    /* border: 3px solid red; */
+    margin: auto;
+}
+.container .table input {
+    display: none;
+}
+.container .table label {
+    font-size: 25px;
+    display: block;
+    background: #2AA69A;
+    position: relative;
+    padding: 5px ;
+    color: #fff;
+    cursor: pointer;
+}
+.container .table input:checked ~ .content{
+    display: block;
+}
+.container .table label:hover {
+    background: rgb(13, 163, 233);
+}
+.container .table label::after {
+    content: "+";
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+.container .table input:checked ~label::after {
+    content: "-";
+    position: absolute;
+    top: 0;
+    right: 8px;
+}
+.container .table .content {
+    padding: 5px ;
+    color: #fff;
+    background:#4FB6AC;
+    display: none;
+}
